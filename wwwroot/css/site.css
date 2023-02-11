@@ -1,0 +1,50 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    font-family: 'Roboto Slab', serif;
+    height: 100%;
+    margin: 0;
+}
+
+.menurow {
+    background-color: green;
+    flex: 2;
+    display: flex;
+}
+
+.col1 {
+    background-color: lightgrey;
+    flex: 0 0 86%;
+}
+
+.col2 {
+    /*background-color: rgb(40,62,74);*/
+    /*background: linear-gradient(to top, #4b6cb7, #182848);*/
+    background: linear-gradient(to top, #000428, #004e92);
+    flex: 1 1;
+}
+
+.fullHeight {
+    height: 100vh;
+}
+
+.nopad {
+    padding: 0px;
+}

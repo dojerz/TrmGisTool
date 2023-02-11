@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - TrmGisTool</title>
+    <link rel="stylesheet" href="~/lib/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/TrmGisTool.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <script>
+        var map;
+    </script>
+    @RenderBody()
+    <script>
+        function initMap() { } // Dummy function to Google Api callback
+        window.initMap = initMap;
+    </script>
+    <script src="~/lib/leaflet/leaflet.js"></script>
+    <script src="~/lib/leafletGoogle/Google.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5DkyQIBmE2VS4wFzZ0QSepje_6Mwkp1Q&callback=initMap"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
